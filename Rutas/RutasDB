@@ -1,0 +1,9 @@
+create database ruta;
+
+create table ruta(idruta int not null, cp int not null, idvehiculo int not null, primary key (idruta);
+
+insert into ruta (cp, idvehiculo) value (55789, 2);
+insert into ruta (cp, idvehiculo) value (94632, 3);
+insert into ruta (cp, idvehiculo) value (48590, 4);
+insert into ruta (cp, idvehiculo) value (11023, 5);
+insert into ruta (cp, idvehiculo) value (44958, 6);
