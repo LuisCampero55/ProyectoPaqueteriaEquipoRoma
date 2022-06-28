@@ -23,7 +23,7 @@ routes.post('/agregar',(req,res)=>{
 
 routes.delete('/:id',(req, res)=>{
     const{id} = req.params
-    let sql =`delete from datos_personales where idvehiculos = '${id}'`
+    let sql =`delete from datos_personales where idUsuarios = '${id}'`
     conecta.query(sql, (err, rows, fields)=>{
         if(err) throw err
         else{
