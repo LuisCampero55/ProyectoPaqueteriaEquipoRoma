@@ -1,0 +1,47 @@
+img{
+  width: 15%;
+  height: 20%;
+  position: relative;
+  left: 1000px;
+  top: -250px;
+}
+
+input{
+  height: 10%;
+  width: 33%;
+  border-radius:22px;
+}
+
+
+.boton{
+
+  text-decoration: none;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  display:inline-block;
+  color: #FFF;
+  background: #7F8C8D;
+  padding: 5px 15px;
+  white-space: nowrap;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin: 10px 5px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.azul{
+  background: #3498DB;
+}
+
+.azul:hover{
+  background: #2980B9;
+}
+
+
+
+
+

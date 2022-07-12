@@ -1,0 +1,5 @@
+<p>DATOS </p>
+<button>USUARIOS</button>   <button>EDITAR</button>    <button>ELIMINAR</button>
+<div *ngFor="let usuario of ListarUsuarios">
+<label>{{usuario.idUsuario}} {{usuario.nombre_empresa}} {{usuario.cp}} {{usuario.Correo}} {{usuario.Contrasenia}}</label>
+</div>

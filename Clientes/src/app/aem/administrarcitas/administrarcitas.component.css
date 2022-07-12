@@ -1,0 +1,101 @@
+.container {
+  height: 10%;
+  width: 33%;
+  position: relative;
+  left: -33%;
+  border-radius:22px;
+}
+input{
+  width: 100%;
+  border-radius:5px;
+}
+
+.row{
+  width: 300%;
+}
+
+.container2 {
+  height: 10%;
+  width: 12.3%;
+  position: relative;
+
+  border-radius:22px;
+}
+.low{
+  position: relative;
+  width: 100%;
+  top: -30%;
+  left: 105%;
+}
+.container4 {
+  height: 10%;
+  width: 32.7%;
+  position: relative;
+
+  border-radius:22px;
+}
+img{
+  width: 100%;
+  position: relative;
+  left: 1000px;
+  top: 20px;
+}
+
+.container5{
+  position: relative;
+  height: 100px;
+  width: 200px;
+  left: 0px;
+  top: -150px;
+}
+
+.container7{
+  position: relative;
+  width: 300px;
+  left: -210px;
+  top: 100px;
+}
+.resumen-up {
+  font-size: 15px;
+  background: silver;
+  padding: 10px;
+  margin-bottom: 80px;
+  height: 200px;
+}
+.container3{
+  position: relative;
+  height: 10%;
+  width: 10%;
+  left: -25%;
+  top: -200px;
+}
+button{
+  height: 40px;
+  width: 40px;
+  position: relative;
+  left: 1600px;
+  top: -870px;
+}
+icon{
+  height: 50px;
+  width: 50px;
+  position: relative;
+  left: 10px;
+  top: 50px;
+}
+
+
+
+/*** custom checkboxes ***/
+
+input[type=checkbox] { display:none; } /* to hide the checkbox itself */
+input[type=checkbox] + label:before {
+  font-family: FontAwesome;
+  display: inline-block;
+}
+
+input[type=checkbox] + label:before { content: "\f096"; } /* unchecked icon */
+input[type=checkbox] + label:before { letter-spacing: 10px; } /* space between checkbox and label */
+
+input[type=checkbox]:checked + label:before { content: "\f046"; } /* checked icon */
+input[type=checkbox]:checked + label:before { letter-spacing: 5px; } /* allow space for check mark */
