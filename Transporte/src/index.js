@@ -2,9 +2,7 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 /* instalar el cors*/
-
 const port = (process.env.port || 4500);
-
 app.set('port',port);
 
 app.listen(app.get('port'),(error)=>{
