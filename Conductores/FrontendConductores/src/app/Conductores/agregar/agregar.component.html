@@ -1,0 +1,59 @@
+<div class="container">
+  <h1 style="margin-left: 370px">Agregar conductor</h1>
+  <div class="container pt-4">
+    <div class="row">
+      <div class="col-lg-6 offset-lg-3">
+        <div class="card text-center">
+          <div class="card-body">
+            <form>
+              <div class="row">
+                <div class="col">
+                  <input [(ngModel)]="conductores.idConductor" type="text" class="form-control form-control-lg mt-1" name="idConductor"
+                         placeholder="id">
+                </div>
+                <div class="col">
+                  <input [(ngModel)]="conductores.idDatos" type="text" class="form-control form-control-lg mt-1" name="idDatos"
+                         placeholder="idDatos">
+                </div>
+                <div class="col">
+                  <input [(ngModel)]="conductores.idTransRuta" type="text" class="form-control form-control-lg mt-1" name="idTransRuta"
+                         placeholder="idTransRuta">
+                </div>
+              </div>
+                <div class="col">
+                  <input [(ngModel)]="conductores.Licencia" type="text" class="form-control form-control-lg mt-1" name="Licencia"
+                        placeholder="Licencia">
+                </div>
+
+              <!--<div class="col">
+                  <input [(ngModel)]="conductores.nombre" type="text" class="form-control" name="nombre"
+                         placeholder="Nombre">
+                </div>
+                <div class="col">
+                  <input [ngModel]="conductores.apellido" type="text" class="form-control form-control-lg" name="apellido"
+                         placeholder="Apellido">
+                </div>
+              </div>
+              <input [ngModel]="conductores.edad" type="number" class="form-control form-control-lg mt-3" name="edad"
+                     placeholder="Edad">
+
+              <input [ngModel]="conductores.licencia" type="number" class="form-control form-control-lg mt-3" name="licencia"
+                     placeholder="Licencia">
+
+              <input [ngModel]="conductores.idTransRuta" type="numbre" class="form-control form-control-lg mt-3" name="idTransRuta"
+                     placeholder="idTransRuta">
+                     -->
+              <div class="mt-3">
+                <button type="text" class="btn-space btn-dark btn-lg mr-3 " routerLink="/inicio">Lista de conductores</button>
+                <button type="text" class="btn-space btn-dark btn-lg mr-3" routerLink="/list">Lista de registros</button>
+              </div>
+              <div class="mt-3">
+                <button (click)="agregar()" class="btn-space btn-lg mr-3" style="background-color: #8B051B; color:#f2f2f2">Agregar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

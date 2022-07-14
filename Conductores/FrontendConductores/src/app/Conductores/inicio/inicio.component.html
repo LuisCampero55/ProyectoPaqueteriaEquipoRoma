@@ -1,0 +1,41 @@
+<div class="container">
+  <p class="h1">Conductores</p>
+
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Edad</th>
+      <!--<th scope="col">idDatos</th>-->
+      <th scope="col">Licencia</th>
+      <th scope="col">idTransRuta</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Eliminar</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let conductor of ListarConduc">
+      <th>{{conductor.idConductor}}</th>
+      <td>{{conductor.Nombre}}</td>
+      <td>{{conductor.Apellido}}</td>
+      <td>{{conductor.Edad}}</td>
+      <!--<td>{{conductor.idDatos}}</td>-->
+      <td>{{conductor.Licencia}}</td>
+      <td>{{conductor.idTransRuta}}</td>
+      <td>
+        <button (click)="modificar(conductor.idConductor)" type="button" class="btn btn" style="background-color: #FFB300; color:#000000">Editar</button>
+      </td>
+      <td>
+        <button (click)="eliminar(conductor.idConductor)" type="button" class="btn btn-danger">Eliminar</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <button routerLink="/add" type="button" class="btn" style="margin-top: 10px;background-color: #8B051B; color:#f2f2f2">Regresar</button>
+  <button routerLink="/listcomp" type="text" class="btn" style="margin-left: 350px;margin-top: 10px; background-color: #8B051B; color:#f2f2f2" >Datos Completos</button>
+
+</div>
+
