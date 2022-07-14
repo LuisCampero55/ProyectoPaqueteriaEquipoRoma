@@ -16,6 +16,16 @@ else
         })
 })
 
+//Mostrar Detalles de los Transportes y rutas
+routes.get('/detalles',(req,res)=>{
+    let sql= "SELECT * FROM ruta INNER JOIN transruta on ruta.idruta = transruta.idtransruta INNER JOIN transporte on transruta.idtransruta = transporte.idtransporte";
+    conecta.query(sql,(err,rows, fields)=>{
+    if(!err)res.json(rows)
+        else
+            console.error(err)
+        })
+})
+
 /*buscar por ID*/
 routes.get('/:id-transporte',(req,res)=>{
     const{id} = req.params
@@ -38,8 +48,9 @@ routes.post('/agregar-transporte',(req,res)=>{
         }
     })
 });
+
 /* Eliminar un Transporte*/
-routes.delete('/:id-Eliminartransporte',(req, res)=>{
+routes.delete('/:id',(req, res)=>{
     const{id} = req.params
     let sql =`delete from transporte where idTransporte = '${id}'`
     conecta.query(sql, (err, rows, fields)=>{
@@ -49,6 +60,7 @@ routes.delete('/:id-Eliminartransporte',(req, res)=>{
         }
     })
 });
+
 /* Modificar un Transporte*/
 routes.put('/transporte/:id',(req, res)=>{
     const{id}=req.params
@@ -63,5 +75,4 @@ routes.put('/transporte/:id',(req, res)=>{
     })
 
 })
-
 module.exports = routes;
