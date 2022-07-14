@@ -38,7 +38,6 @@ routes.post('/agregar-transporte',(req,res)=>{
         }
     })
 });
-
 /* Eliminar un Transporte*/
 routes.delete('/:id-Eliminartransporte',(req, res)=>{
     const{id} = req.params
@@ -50,7 +49,6 @@ routes.delete('/:id-Eliminartransporte',(req, res)=>{
         }
     })
 });
-
 /* Modificar un Transporte*/
 routes.put('/transporte/:id',(req, res)=>{
     const{id}=req.params
