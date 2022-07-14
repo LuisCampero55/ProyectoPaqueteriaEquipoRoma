@@ -1,5 +1,4 @@
 CREATE DATABASE paqueteria;
-
 USE paqueteria;
 
 CREATE TABLE `paqueteria`.`transporte` (
