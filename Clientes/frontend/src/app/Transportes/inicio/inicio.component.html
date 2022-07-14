@@ -1,0 +1,61 @@
+<div class="container">
+    <h1>Datos</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>NombreEmpresa</th>
+                <th>Direccion</th>
+              <th></th>
+              <th>Editar</th>
+              <th>Eliminar</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let transporte of ListarTransporte">
+                <td>{{transporte.idEmpresa}}</td>
+                <td>{{transporte.Nombre}}</td>
+                <td>{{transporte.Direccion}}</td>
+                <td>
+
+                </td>
+                <td>
+                    <button (click)="modificar(transporte.idEmpresa)" type="button" class="btn btn-primary">Editar</button>
+                </td>
+                <td>
+                    <button (click)="eliminar(transporte.idEmpresa)" type="button" class="btn btn-danger">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+        <thead>
+
+
+
+          <h1>Consulta</h1>
+
+            <tr>
+              <th scope="col">ID Empresa</th>
+              <th scope="col">NombreEmpresa</th>
+              <th scope="col">Direccion</th>
+              <th scope="col">IdPaquete</th>
+              <th scope="col">Peso</th>
+              <th scope="col">Dimension</th>
+
+            </tr>
+          </thead>
+          <tbody class="table-group-divider">
+            <tr *ngFor="let con of ListarConsultas">
+              <th>{{con.idEmpresa}}</th>
+              <td>{{con.Nombre}}</td>
+              <td>{{con.Direccion}}</td>
+              <th>{{con.idPaquete}}</th>
+              <td>{{con.Peso}}</td>
+              <td>{{con.Dimension}}</td>
+              <td>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+</div>
+

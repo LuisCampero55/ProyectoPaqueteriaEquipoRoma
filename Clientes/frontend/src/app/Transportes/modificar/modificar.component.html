@@ -1,0 +1,32 @@
+<div class="container">
+    <h1 style="margin-left: 370px">Modificar Empresa</h1>
+    <div class="container pt-4">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="card text-center">
+            <div class="card-body">
+              <form>
+                <div class="row">
+                  <div class="col">
+                    <input [(ngModel)]="transporte.idEmpresa" type="text" class="form-control" name="idEmpresa"
+                           placeholder="idEmpresa">
+                  </div>
+                  <div class="col">
+                    <input [(ngModel)]="transporte.Nombre" type="text" class="form-control form-control-lg" name="Nombre"
+                           placeholder="NombreEmpresa">
+                  </div>
+                </div>
+                <input [(ngModel)]="transporte.Direccion" type="text" class="form-control form-control-lg mt-3" name="Direccion"
+                       placeholder="Direccion">
+
+                <div class="mt-3">
+                  <button type="text" class="btn btn-secondary btn-lg mr-3" routerLink="/inicio">Lista</button>
+                  <button (click)="modificar()" class="btn btn-dark btn-lg">Guardar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
