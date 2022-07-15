@@ -1,0 +1,30 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-sm-6">
+      <form>
+        <div class="mb-3">
+          <label class="form-label" style="margin-top: 40px"> ID de la Ruta</label>
+        </div>
+        <div class="mb-3">
+          <input [(ngModel)]="ruta.idRuta" type="text" class="form-control" name="idruta">
+        </div>
+        <div class="mb-3">
+          <label class="form-label"> Nombre Ruta</label>
+        </div>
+        <div class="mb-3">
+          <input [(ngModel)]="ruta.Ruta" type="text" class="form-control" name="ruta">
+        </div>
+        <div class="mb-3">
+          <label class="form-label"> ID Colonia CP</label>
+        </div>
+        <div class="mb-3">
+          <input [(ngModel)]="ruta.idColCP" type="text" class="form-control" name="idcolcp">
+        </div>
+
+        <button (click)="mruta()" type="button" class="btn btn-primary"  style="margin-left: 10px; margin-top: 10px; background-color: #8B051B; color: #f2f2f2"> Guardar</button>
+
+      </form>
+    </div>
+  </div>
+</div>

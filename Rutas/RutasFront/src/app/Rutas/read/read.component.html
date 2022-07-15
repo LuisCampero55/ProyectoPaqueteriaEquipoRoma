@@ -1,0 +1,108 @@
+<button type="button" class="btn btn-primary" (click)="mrutas()" style="margin-left: 250px; margin-top: 10px; background-color: #FFB300; color: #000000">Ver Rutas</button>
+<button type="button" class="btn btn-primary" (click)="brutas = false" style="margin-left: 10px; margin-top: 10px; background-color: #8B051B; color: #f2f2f2">Ocultar Rutas</button>
+
+<button type="button" class="btn btn-primary" (click)="mcolonias()" style="margin-left: 50px; margin-top: 10px; background-color: #FFB300; color: #000000">Ver Colonias</button>
+<button type="button" class="btn btn-primary" (click)="bcolonias = false" style="margin-left: 10px; margin-top: 10px; background-color: #8B051B; color: #f2f2f2">Ocultar Colonias</button>
+
+<button type="button" class="btn btn-primary" (click)="mcps()" style="margin-left: 50px; margin-top: 10px; background-color: #FFB300; color: #000000">Ver Codigos Postales</button>
+<button type="button" class="btn btn-primary" (click)="bcps = false" style="margin-left: 10px; margin-top: 10px; background-color: #8B051B; color: #f2f2f2">Ocultar Codigos Postales</button>
+
+<button type="button" class="btn btn-primary" (click)="mconsultas()" style="margin-left: 50px; margin-top: 10px; background-color: #FFB300; color: #000000">Ver Consultas</button>
+<button type="button" class="btn btn-primary" (click)="bconsultas = false" style="margin-left: 10px; margin-top: 10px; background-color: #8B051B; color: #f2f2f2">Ocultar Consultas</button>
+
+<table class="table" *ngIf="brutas">
+  <thead>
+    <tr>
+      <th scope="col">ID Ruta</th>
+      <th scope="col">Ruta</th>
+      <th scope="col">ID Col CP</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Eliminar</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr *ngFor="let rut of ListarRutas">
+      <th>{{rut.idRuta}}</th>
+      <td>{{rut.Ruta}}</td>
+      <td>{{rut.idColCP}}</td>
+      <td>
+        <button (click)="mruta(rut.idRuta)" type="button" class="btn btn-primary" style="background-color: #FFB300; color: #000000">Editar</button>
+      </td>
+      <td>
+        <button (click)="eruta(rut.idRuta)" type="button" class="btn btn-danger" style="background-color: #8B051B; color: #f2f2f2">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="table" *ngIf="bcolonias">
+  <thead>
+    <tr>
+      <th scope="col">ID Colonia</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Eliminar</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr *ngFor="let col of ListarColonias">
+      <th>{{col.idColonias}}</th>
+      <td>{{col.Nombre}}</td>
+      <td>
+        <button (click)="mcolonia(col.idColonias)" type="button" class="btn btn-primary" style="background-color: #FFB300; color: #000000">Editar</button>
+      </td>
+      <td>
+        <button (click)="ecolonia(col.idColonias)" type="button" class="btn btn-danger" style="background-color: #8B051B; color: #f2f2f2">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table" *ngIf="bcps">
+  <thead>
+    <tr>
+      <th scope="col">ID CP</th>
+      <th scope="col">Numero</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Eliminar</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr *ngFor="let cps of ListarCPs">
+      <th>{{cps.idCP}}</th>
+      <td>{{cps.Numero}}</td>
+      <td>
+        <button (click)="mcp(cps.idCP)" type="button" class="btn btn-danger" style="background-color: #FFB300; color: #000000">Editar</button>
+      </td>
+      <td>
+        <button (click)="ecp(cps.idCP)" type="button" class="btn btn-danger"  style="background-color: #8B051B; color: #f2f2f2">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table" *ngIf="bconsultas">
+  <thead>
+    <tr>
+      <th scope="col">ID Ruta</th>
+      <th scope="col">Ruta</th>
+      <th scope="col">ID Colonia CP</th>
+      <th scope="col">ID Trans Ruta</th>
+      <!--<th scope="col">ID Transporte</th>-->
+      <th scope="col">Placas</th>
+      <th scope="col">Tipo</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr *ngFor="let con of ListarConsultas">
+      <th>{{con.idRuta}}</th>
+      <td>{{con.Ruta}}</td>
+      <td>{{con.idColCP}}</td>
+      <td>{{con.idTransRuta}}</td>
+      <!--<td>{{con.idTransporte}}</td>-->
+      <td>{{con.Placas}}</td>
+      <td>{{con.Tipo}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,81 @@
+<div class="container">
+
+  <button type="button" class="btn btn-primary" (click)="mrutas()" style="margin-left: 10px; margin-top: 10px; background-color: #FFB300; color: #000000">Agregar Rutas</button>
+
+  <button type="button" class="btn btn-primary" (click)="mcolonias()" style="margin-left: 280px; margin-top: 10px; background-color: #FFB300; color: #000000">Agregar Colonias</button>
+
+  <button type="button" class="btn btn-primary" (click)="mcps()" style="margin-left: 280px; margin-top: 10px; background-color: #FFB300; color: #000000">Agregar Codigos Postales</button>
+
+  <div class="row" *ngIf="bruta">
+    <div class="col-sm-6">
+      <form>
+        <div class="mb-3">
+          <label class="form-label" style="margin-top: 40px"> ID de la Ruta</label>
+        </div>
+        <div class="mb-3">
+          <input [(ngModel)]="ruta.idRuta" type="text" class="form-control" name="idruta">
+        </div>
+        <div class="mb-3">
+          <label class="form-label"> Nombre Ruta</label>
+        </div>
+        <div class="mb-3">
+          <input [(ngModel)]="ruta.Ruta" type="text" class="form-control" name="ruta">
+        </div>
+        <div class="mb-3">
+          <label class="form-label"> ID Colonia CP</label>
+        </div>
+        <div class="mb-3">
+          <input [(ngModel)]="ruta.idColCP" type="text" class="form-control" name="idcolcp">
+        </div>
+
+        <button (click)="cruta()" type="button" class="btn btn-primary"  style="margin-left: 10px; margin-top: 10px; background-color: #8B051B; color: #f2f2f2"> Agregar</button>
+
+      </form>
+    </div>
+  </div>
+
+
+
+  <div class="row" *ngIf="bcolonia">
+    <div class="col-sm-6">
+      <form>
+        <div class="mb-3">
+          <label class="form-label" style="margin-top: 40px"> ID de la Colonia</label>
+        </div>
+        <div class="mb-3">
+          <input [(ngModel)]="colonia.idColonias" type="text" class="form-control" name="idcolonia">
+        </div>
+        <div class="mb-3">
+          <label class="form-label"> Nombre de la Colonia</label>
+        </div>
+        <div class="mb-3">
+          <input [(ngModel)]="colonia.Nombre" type="text" class="form-control" name="nombre">
+        </div>
+        <button (click)="ccolonia()" type="button" class="btn btn-primary" style="margin-left: 10px; margin-top: 10px; background-color: #8B051B; color: #f2f2f2"> Agregar</button>
+      </form>
+    </div>
+  </div>
+
+
+
+  <div class="row" *ngIf="bcp">
+    <div class="col-sm-6">
+      <form>
+        <div class="mb-3">
+          <label class="form-label" style="margin-top: 40px"> ID del Codigo Postal</label>
+        </div>
+        <div class="mb-3">
+          <input [(ngModel)]="cp.idCP" type="text" class="form-control" name="idcp">
+        </div>
+        <div class="mb-3">
+          <label class="form-label"> Numero</label>
+        </div>
+        <div class="mb-3">
+          <input [(ngModel)]="cp.Numero" type="text" class="form-control" name="numero">
+        </div>
+        <button (click)="ccp()" type="button" class="btn btn-primary"> Agregar</button>
+      </form>
+    </div>
+  </div>
+
+</div>
